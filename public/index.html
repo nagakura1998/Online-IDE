@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Online IDE</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="keywords" content="brainfuck, bf, interpreter, debugger">
+    </head>
+    
+    <body>
+        <div id="header">
+            <h4>Theme: </h4>
+            <select id="theme-sel" onchange="changeTheme()">
+                <option value="ambiance"               >ambiance</option>
+                <option value="chaos"                  >chaos</option>
+                <option value="chrome"                 >chrome</option>
+                <option value="clouds"                 >clouds</option>
+                <option value="clouds_midnight"        >clouds_midnight</option>
+                <option value="cobalt"                 >cobalt</option>
+                <option value="crimson_editor"         >crimson_editor</option>
+                <option value="dawn"                   >dawn</option>
+                <option value="dracula"                >dracula</option>
+                <option value="dreamweaver"            >dreamweaver</option>
+                <option value="eclipse"                >eclipse</option>
+                <option value="github"                 >github</option>
+                <option value="gob"                    >gob</option>
+                <option value="gruvbox"                >gruvbox</option>
+                <option value="idle_fingers"           >idle_fingers</option>
+                <option value="iplastic"               >iplastic</option>
+                <option value="katzenmilch"            >katzenmilch</option>
+                <option value="kr_theme"               >kr_theme</option>
+                <option value="kuroir"                 >kuroir</option>
+                <option value="merbivore"              >merbivore</option>
+                <option value="merbivore_soft"         >merbivore_soft</option>
+                <option value="mono_industrial"        >mono_industrial</option>
+                <option value="monokai"                >monokai</option>
+                <option value="nord_dark"              >nord_dark</option>
+                <option value="pastel_on_dark"         >pastel_on_dark</option>
+                <option value="solarized_dark"         >solarized_dark</option>
+                <option value="solarized_light"        >solarized_light</option>
+                <option value="sqlserver"              >sqlserver</option>
+                <option value="terminal"               >terminal</option>
+                <option value="textmate"               >textmate</option>
+                <option value="tomorrow"               >tomorrow</option>
+                <option value="tomorrow_night"         >tomorrow_night</option>
+                <option value="tomorrow_night_blue"    >tomorrow_night_blue</option>
+                <option value="tomorrow_night_bright"  >tomorrow_night_bright</option>
+                <option value="tomorrow_night_eighties" selected>tomorrow_night_eighties</option>
+                <option value="twilight"               >twilight</option>
+                <option value="vibrant_ink"            >vibrant_ink</option>
+                <option value="xcode"                  >xcode</option>
+            </select>
+            <h4>Color: </h4>
+            <select id="color-sel" onchange="changeColor()">
+                <option value="hotpink">hot pink</option>
+                <option value="aqua"   >aqua</option>
+                <option value="fuchsia">fuchsia</option>
+                <option value="lime"   >lime</option>
+                <option value="crimson">crimson</option>
+                <option value="red"    >red</option>
+                <option value="black"  >black</option>
+                <option value="white"  >white</option>
+            </select>
+            <h4>Language: </h4>
+            <select id="language-sel" onchange="changeLanguage()">
+                <option value="cpp">C++</option>
+                <option value="java"   >Java</option>
+                <option value="python">Python</option>
+                <option value="javascript"   >Javascript</option>
+            </select>
+        </div>
+
+        <div id="main">
+            <div id="editor"></div>
+            <div>
+                <textarea id="input"  placeholder="Input"  rows="15" cols="100"></textarea>
+                <textarea id="output" placeholder="Output" rows="15" cols="100" readonly></textarea>
+            </div>
+            
+        </div>
+
+        <div id="footer">
+            
+        </div>
+    </body>
+
+    <script src="jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+    <script src="ace/mode/bf.js"></script>
+    <script src="utils/math.js"></script>
+    <script src="utils/string.js"></script>
+    <script src="utils/number.js"></script>
+    <script src="utils/array.js"></script>
+    <script src="utils/ace.js"></script>
+    <script src="core.js"></script>
+</html>
