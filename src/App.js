@@ -114,6 +114,10 @@ function App() {
         console.log(decoded_output)
         $('#output').html(final_output);
     }
+    function clearCode(){
+        const editor = ace.edit('editor');
+        editor.setValue("")
+    }
     return (
       <>
         <br></br>
@@ -123,7 +127,7 @@ function App() {
                     </div> : null
         }
         <button id="run" onClick={runCode}>Run</button>
-        <button id="clr1">Clear</button>
+        <button id="clr1" onClick={clearCode}>Clear</button>
         <br></br>
       </>
     );
